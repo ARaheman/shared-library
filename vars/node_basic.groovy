@@ -3,7 +3,7 @@
 def call(Map config=[:], Closure body) {
     pipeline {
    agent {
-        dockerfile {
+        docker {
             image 'node:12.18.3-alpine'
             args '-p 3000:3000 -p 5000:5000'
         }
