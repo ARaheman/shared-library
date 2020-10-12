@@ -2,6 +2,7 @@
 
 def call(Map config=[:], Closure body) {
     pipeline {
+        agent { Dockerfile true }
    agent {
         docker {
             image 'node:12.18.3-alpine'
