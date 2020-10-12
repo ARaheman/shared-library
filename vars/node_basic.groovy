@@ -2,6 +2,8 @@
 
 def call(Map config=[:], Closure body) {
     pipeline {
+      agent none
+
    agent {
         docker {
             image 'node:12.18.3-alpine'
