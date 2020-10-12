@@ -2,7 +2,9 @@
 
 def call(Map config=[:], Closure body) {
     pipeline {
-      agent none
+      agent {
+    label 'docker' 
+  }
 
    agent {
         docker {
